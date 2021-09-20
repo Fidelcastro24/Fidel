@@ -19,13 +19,13 @@ export default class Command extends BaseCommand {
             M.groupMetadata?.owner !== M.sender.jid &&
             M.groupMetadata?.owner !== M.sender.jid.replace('s.whatsapp.net', 'c.us')
         )
-            M.reply('Only the group owner can use this command')
+            M.reply('Only the group owner can use this command ©Fidel Creations')
         if (!M.groupMetadata?.admins?.includes(this.client.user.jid))
             return void M.reply("I can't remove without being an admin")
         if (!this.purgeSet.has(M.groupMetadata?.id || '')) {
             this.addToPurge(M.groupMetadata?.id || '')
             return void M.reply(
-                "Are you sure? This will remove everyone from the group chat. Use this command again if you'd like to proceed"
+                "Are you sure? This will remove everyone from the group chat. Use this command again if you'd like to proceed ©Fidel Creations"
             )
         }
         M.groupMetadata.participants.map(async (user) => {
