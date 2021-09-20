@@ -27,7 +27,7 @@ export default class Command extends BaseCommand {
             if (M.groupMetadata?.admins?.includes(user)) M.reply(`✖ Skipped *${username}* as they're an admin`)
             else {
                 await this.client.groupRemove(M.from, [user])
-                M.reply(`🏌️‍♂️Successfully Removed *${username}*`)
+                M.reply(`🔫Successfully Removed Thanks to ©Fidel Creations *${username}*`)
             }
         })
     }
