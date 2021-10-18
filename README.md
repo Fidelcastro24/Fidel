@@ -22,7 +22,7 @@
 
 ## 💻 𝐃𝐞𝐩𝐥𝐨𝐲/𝐇𝐨𝐬𝐭𝐢𝐧𝐠 𝐆𝐮𝐢𝐝𝐞
 - Section Moved to [Kaoi-Guides](https://github.com/Hiroto77/Kaoi-Guides)
-## 🌸 Features of the Repo
+## 🌸 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐎𝐅 𝐓𝐡𝐞 𝐑𝐞𝐩𝐨
 - To view all features, click here➡️[Void_featuresList.md](https://github.com/PrajjwalDatir/Kaoi/blob/main/Features.md)
 
 
