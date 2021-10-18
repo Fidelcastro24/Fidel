@@ -13,31 +13,33 @@
 </div><br/>
 <br/>
 
-## 🌺 Highlights
+## 🌺 𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬
 - Fully Modular Design
 - Object Oriented
 - Written in [TypeScript](https://www.typescriptlang.org/)
 - Self-Resoting Auth
 - Built with [Baileys](https://github.com/adiwajshing/baileys) (The Best WhatsApp Library Out There) 
 
-## 💻 Deploy/Hosting Guide
+## 💻 𝐃𝐞𝐩𝐥𝐨𝐲/𝐇𝐨𝐬𝐭𝐢𝐧𝐠 𝐆𝐮𝐢𝐝𝐞
 - Section Moved to [Kaoi-Guides](https://github.com/Hiroto77/Kaoi-Guides)
 ## 🌸 Features of the Repo
 - To view all features, click here➡️[Void_featuresList.md](https://github.com/PrajjwalDatir/Kaoi/blob/main/Features.md)
 
 
-## 🍒 Contribution
+## 🍒 𝐂𝐨𝐧𝐭𝐫𝐢𝐛𝐮𝐭𝐢𝐨𝐧
 
 + Feel free to open issues regarding any problems or if you have any feature requests
 + Make sure to follow the ESLint Rules while editing the code and run `npm run prettier-format` before opening PRs
 
-## 🍂Help
+## 🍂𝐇𝐞𝐥𝐩
 Please give this repo a ✨ if it helped you.
 
 
-## 🤝 Contributers
+## 🤝 𝐂𝐨𝐧𝐭𝐫𝐢𝐛𝐮𝐭𝐞𝐫𝐬
 
 <a href="https://github.com/PrajjwalDatir/Kaoi/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Nakshatra4762/Star-bot" />
 </a>
 
+## 💐𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐓𝐡𝐚𝐧𝐤𝐬
+©𝖋𝖎𝖉𝖊𝖑 𝖈𝖆𝖘𝖙𝖗𝖔 𝖆𝖑𝖊𝖏𝖆𝖓𝖉𝖗𝖔
