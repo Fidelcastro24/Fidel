@@ -32,12 +32,14 @@ export default class Command extends BaseCommand {
                     categories[info.config.category].push(info)
                 }
             }
-            let text = `✨ *╭─「＜（＾－＾）＞」
-│❏ Owner:Fidel Castro
-│❏ Bot Name: 𝐅𝐈𝐃𝐄𝐋🈰⻩
-│❏ Prefix: $
-│❏ Owner: <$Mod>
-╰────────────┈㊰* ✨\n\n`
+            let text = `🍬🍭 *『ʜᴇʏ ꜰᴀɪʀʏ🧚‍♂️🧚‍♀️』*
+│*©𝔣𝔦𝔡𝔢𝔩 𝔠𝔞𝔰𝔱𝔯𝔬 𝔠𝔯𝔢𝔞𝔱𝔦𝔬𝔫𝔰*
+│❏ 🄱🄾🅃 🄽🄰🄼🄴:*𝚁𝚊𝙾𝙽𝚎*
+│❏ 🄿🅁🄴🄵🄸🅇:*$* 
+│❏ 🄾🅆🄽🄴🅁: *<$Mod>*
+ ❏ 🄽🄾🅃🄴:*𝖇𝖔𝖙 𝕾𝖊𝖓𝖉 𝖎𝖓𝖛𝖎𝖙𝖆𝖙𝖎𝖔𝖓 
+ 𝖑𝖎𝖓𝖐 𝖙𝖔 𝖆𝖉𝖉 𝖇𝖔𝖙 𝖙𝖔 𝖞𝖔𝖚𝖗 𝖌𝖈*
+╰────────────┈㊰* 🍭🍬\n\n`
             const keys = Object.keys(categories)
             for (const key of keys)
                 text += `${this.emojis[keys.indexOf(key)]} *${this.client.util.capitalize(key)}*\n❐ \`\`\`${categories[
@@ -46,7 +48,7 @@ export default class Command extends BaseCommand {
                     .map((command) => command.config?.command)
                     .join(', ')}\`\`\`\n\n`
             return void M.reply( 
-                `${text} 🗃️ *Note: Use ${this.client.config.prefix}help <command_name> to view the command info*`
+                `${text} 🍭 *Note: Use ${this.client.config.prefix}help <command_name> to view the command info For 𝚁𝚊𝙾𝙽𝚎😊😁*`
             )
         }
         const key = parsedArgs.joined.toLowerCase()
@@ -56,15 +58,15 @@ export default class Command extends BaseCommand {
         M.reply(
             `🎫 *Command:* ${this.client.util.capitalize(command.config?.command)}\n🎗️ *Status:* ${
                 state ? 'Disabled' : 'Available'
-            }\n🀄 *Category:* ${this.client.util.capitalize(command.config?.category || '')}${
+            }\n🍨 *Category:* ${this.client.util.capitalize(command.config?.category || '')}${
                 command.config.aliases
                     ? `\n🍥 *Aliases:* ${command.config.aliases.map(this.client.util.capitalize).join(', ')}`
                     : ''
-            }\n🃏 *Group Only:* ${this.client.util.capitalize(
+            }\n🍧 *Group Only:* ${this.client.util.capitalize(
                 JSON.stringify(!command.config.dm ?? true)
             )}\n🎀 *Usage:* ${command.config?.usage || ''}\n\n🔖 *Description:* ${command.config?.description || ''}`
         )
     }
 
-    emojis = ['🌀', '🎴', '🔮', '👑', '🎈', '🕺', '⚙️', '🍀']
+    emojis = ['🍋', '🍇', '🍭', '🍬', '🍒', '🍓', '🍎', '🍡']
 }
