@@ -1,5 +1,5 @@
 <div align="center">
-<a href="https://ibb.co/wQ4GK21"><img src="https://i.ibb.co/cND9ndH/menu.png" alt="whatsapp-botto-void-init" border="0"></a>
+<a href="https://ibb.co/wQ4GK21"><img src="https://i.imgur.com/SHvtRot.jpeg" alt="whatsapp-botto-void-init" border="0"></a>
 
 # **𝙵𝚒𝚍𝚎𝚕 : 𝙸'𝚖 𝙹𝚞𝚜𝚝 𝙰 𝚂𝚊𝚍 𝙼𝚊𝚌𝚑𝚒𝚗𝚎😔**
 [![CodeFactor](https://www.codefactor.io/repository/github/prajjwaldatir/kaoi/badge)](https://www.codefactor.io/repository/github/prajjwaldatir/kaoi)
