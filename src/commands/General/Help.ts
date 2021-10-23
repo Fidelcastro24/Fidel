@@ -1,10 +1,10 @@
 import MessageHandler from '../../Handlers/MessageHandler'
 import BaseCommand from '../../lib/BaseCommand'
 import WAClient from '../../lib/WAClient'
-import request from '../../lib/request'
-import { MessageType } from '@adiwajshing/baileys'
-
 import { ICommand, IParsedArgs, ISimplifiedMessage } from '../../typings'
+import { MessageType, Mimetype } from '@adiwajshing/baileys'
+import request from '../../lib/request'
+
 
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
@@ -13,12 +13,15 @@ export default class Command extends BaseCommand {
             description: 'Displays the help menu or shows the info of the command provided',
             category: 'general',
             usage: `${client.config.prefix}help (command_name)`,
-            dm: true,
-            aliases: ['menu']
+            aliases: ['h']
         })
     }
 
     run = async (M: ISimplifiedMessage, parsedArgs: IParsedArgs): Promise<void> => {
+            const n = [
+            './assets/videos/Sukuna/sukuna.mp4'
+        ]
+        let sukuna = n[Math.floor(Math.random() * n.length)]
         if (!parsedArgs.joined) {
             const commands = this.handler.commands.keys()
             const categories: { [key: string]: ICommand[] } = {}
@@ -32,23 +35,32 @@ export default class Command extends BaseCommand {
                     categories[info.config.category].push(info)
                 }
             }
-            let text = `🍬🍭 *『ʜᴇʏ ꜰᴀɪʀʏ🧚‍♂️🧚‍♀️』*
-│*©𝔣𝔦𝔡𝔢𝔩 𝔠𝔞𝔰𝔱𝔯𝔬 𝔠𝔯𝔢𝔞𝔱𝔦𝔬𝔫𝔰*
-│❏ 🄱🄾🅃 🄽🄰🄼🄴:*𝚁𝚊𝙾𝙽𝚎*
-│❏ 🄿🅁🄴🄵🄸🅇:*$* 
-│❏ 🄾🅆🄽🄴🅁: *<$Mod>*
- ❏ 🄽🄾🅃🄴:*𝖇𝖔𝖙 𝕾𝖊𝖓𝖉 𝖎𝖓𝖛𝖎𝖙𝖆𝖙𝖎𝖔𝖓 
- 𝖑𝖎𝖓𝖐 𝖙𝖔 𝖆𝖉𝖉 𝖇𝖔𝖙 𝖙𝖔 𝖞𝖔𝖚𝖗 𝖌𝖈*
-╰────────────┈㊰* 🍭🍬\n\n`
+            let text = `
+╭─「(_　_)。゜zｚＺ」
+│⎚ User: *${M.sender.username}*
+│⎚ Name: 𝚁𝚊𝙾𝙽𝚎
+│⎚ Prefix: !
+│⎚ Owner: <!mod>
+╰────────────┈太陽                 \n\n`
             const keys = Object.keys(categories)
             for (const key of keys)
-                text += `${this.emojis[keys.indexOf(key)]} *${this.client.util.capitalize(key)}*\n❐ \`\`\`${categories[
+                text += `❖┈ᕮ✧${this.emojis[keys.indexOf(key)]} ${this.client.util.capitalize(key)}✧ᕭ┈❖\n• \`\`\`${categories[
                     key
                 ]
                     .map((command) => command.config?.command)
                     .join(', ')}\`\`\`\n\n`
-            return void M.reply( 
-                `${text} 🍭 *Note: Use ${this.client.config.prefix}help <command_name> to view the command info For 𝚁𝚊𝙾𝙽𝚎😊😁*`
+            return void this.client.sendMessage(M.from, { url: sukuna }, MessageType.video, {
+            mimetype: Mimetype.gif,
+            caption: `${text} 
+ ──火┈[ ʂυƙυɳα ზσƚ ]┈火───
+
+┌────────────┈火
+│   ⚡ 𝚁𝚊𝙾𝙽𝚎
+│   ©️ Fidel Castro Bot
+└────────────┈⁂
+火┈[𝐇𝐚𝐯𝐞 𝐆𝐫𝐞𝐚𝐭 𝐃𝐚𝐲]┈火
+
+🎗 *Note: Use ${this.client.config.prefix}help <command_name> to view the command info*` }
             )
         }
         const key = parsedArgs.joined.toLowerCase()
@@ -56,17 +68,17 @@ export default class Command extends BaseCommand {
         if (!command) return void M.reply(`No Command of Alias Found | "${key}"`)
         const state = await this.client.DB.disabledcommands.findOne({ command: command.config.command })
         M.reply(
-            `🎫 *Command:* ${this.client.util.capitalize(command.config?.command)}\n🎗️ *Status:* ${
+            `🚀 *Command:* ${this.client.util.capitalize(command.config?.command)}\n📉 *Status:* ${
                 state ? 'Disabled' : 'Available'
-            }\n🍨 *Category:* ${this.client.util.capitalize(command.config?.category || '')}${
+            }\n⛩ *Category:* ${this.client.util.capitalize(command.config?.category || '')}${
                 command.config.aliases
-                    ? `\n🍥 *Aliases:* ${command.config.aliases.map(this.client.util.capitalize).join(', ')}`
+                    ? `\n♦️ *Aliases:* ${command.config.aliases.map(this.client.util.capitalize).join(', ')}`
                     : ''
-            }\n🍧 *Group Only:* ${this.client.util.capitalize(
+            }\n🎐 *Group Only:* ${this.client.util.capitalize(
                 JSON.stringify(!command.config.dm ?? true)
-            )}\n🎀 *Usage:* ${command.config?.usage || ''}\n\n🔖 *Description:* ${command.config?.description || ''}`
+            )}\n💎 *Usage:* ${command.config?.usage || ''}\n\n📒 *Description:* ${command.config?.description || ''}`
         )
     }
 
-    emojis = ['🍋', '🍇', '🍭', '🍬', '🍒', '🍓', '🍎', '🍡']
+    emojis = ['🈷️', '🈹️', '🈯️', '☮', '🈳️', '🈵️', '🈂️', '㊗️', '🈁️']
 }
