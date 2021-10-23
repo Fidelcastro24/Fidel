@@ -52,7 +52,7 @@ export default class Command extends BaseCommand {
             return void this.client.sendMessage(M.from, { url: sukuna }, MessageType.video, {
             mimetype: Mimetype.gif,
             caption: `${text} 
- ──火┈[ ʂυƙυɳα ზσƚ ]┈火───
+ ──火┈[ 𝚁𝚊𝙾𝙽𝚎 𝚅𝚒𝚕𝚕𝚊𝚒𝚗 𝙱𝚘𝚝 ]┈火───
 
 ┌────────────┈火
 │   ⚡ 𝚁𝚊𝙾𝙽𝚎
