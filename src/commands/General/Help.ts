@@ -19,9 +19,9 @@ export default class Command extends BaseCommand {
 
     run = async (M: ISimplifiedMessage, parsedArgs: IParsedArgs): Promise<void> => {
             const n = [
-            './assets/videos/Sukuna/sukuna.mp4'
+            './assets/videos/Shinobu/shinobu.mp4'
         ]
-        let sukuna = n[Math.floor(Math.random() * n.length)]
+        let shinobu = n[Math.floor(Math.random() * n.length)]
         if (!parsedArgs.joined) {
             const commands = this.handler.commands.keys()
             const categories: { [key: string]: ICommand[] } = {}
@@ -36,29 +36,29 @@ export default class Command extends BaseCommand {
                 }
             }
             let text = `
-╭─「(_　_)。゜zｚＺ」
-│⎚ User: *${M.sender.username}*
-│⎚ Name: 𝚁𝚊𝙾𝙽𝚎
-│⎚ Prefix: !
-│⎚ Owner: <!mod>
-╰────────────┈太陽                 \n\n`
+╭─「（＾∀＾●）ﾉｼ」
+│⋊ ᴜꜱᴇʀ: *${M.sender.username}*
+│⋊ ɴᴀᴍᴇ: ꜱʜɪɴᴏʙᴜ
+│⋊ ᴘʀᴇꜰɪx: ${this.client.config.prefix}
+│⋊ ᴏᴡɴᴇʀ: <${this.client.config.prefix}mod>
+╰────────────┈平和                            \n\n`
             const keys = Object.keys(categories)
             for (const key of keys)
-                text += `❖┈ᕮ✧${this.emojis[keys.indexOf(key)]} ${this.client.util.capitalize(key)}✧ᕭ┈❖\n• \`\`\`${categories[
+                text += `${this.emojis[keys.indexOf(key)]} *${this.client.util.capitalize(key)}* ${this.emojis[keys.indexOf(key)]}\n\n• \`\`\`${categories[
                     key
                 ]
                     .map((command) => command.config?.command)
-                    .join(', ')}\`\`\`\n\n`
-            return void this.client.sendMessage(M.from, { url: sukuna }, MessageType.video, {
+                    .join(' \n ')}\`\`\`\n\n`
+            return void this.client.sendMessage(M.from, { url: shinobu }, MessageType.video, {quoted:M.WAMessage,
             mimetype: Mimetype.gif,
             caption: `${text} 
- ──火┈[ 𝚁𝚊𝙾𝙽𝚎 𝚅𝚒𝚕𝚕𝚊𝚒𝚗 𝙱𝚘𝚝 ]┈火───
+ ──❅┈[ 𝚁𝚊𝙾𝙽𝚎 𝚅𝚒𝚕𝚕𝚊𝚒𝚗 𝙱𝚘𝚝 ]┈❅───
 
-┌────────────┈火
-│   ⚡ 𝚁𝚊𝙾𝙽𝚎
-│   ©️ Fidel Castro Bot
+┌────────────┈❅
+│   〽 𝐑𝐚𝐨𝐧𝐞
+│   ©️ Fidel Castro Tech
 └────────────┈⁂
-火┈[𝐇𝐚𝐯𝐞 𝐆𝐫𝐞𝐚𝐭 𝐃𝐚𝐲]┈火
+❅┈[𝐇𝐚𝐯𝐞 𝐆𝐫𝐞𝐚𝐭 𝐃𝐚𝐲]┈❅
 
 🎗 *Note: Use ${this.client.config.prefix}help <command_name> to view the command info*` }
             )
@@ -80,5 +80,5 @@ export default class Command extends BaseCommand {
         )
     }
 
-    emojis = ['🈷️', '🈹️', '🈯️', '☮', '🈳️', '🈵️', '🈂️', '㊗️', '🈁️']
+    emojis = ['🦋', '🦋', '🦋', '🦋', '🦋', '🦋', '🦋', '🦋', '🦋','🦋', '🦋', '🦋', '🦋', '🦋', '🦋', '🦋', '🦋', '🦋']
 }
