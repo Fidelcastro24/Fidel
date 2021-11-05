@@ -38,7 +38,7 @@ Please give this repo a ✨ if it helped you.
 ## 🤝 𝐂𝐨𝐧𝐭𝐫𝐢𝐛𝐮𝐭𝐞𝐫𝐬
 
 <a href="https://github.com/PrajjwalDatir/Kaoi/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Nakshatra4762/Star-bot" />
+  <img src="https://contrib.rocks/image?repo=Fidelcastro24/Fidel" />
 </a>
 
 ## 💐𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐓𝐡𝐚𝐧𝐤𝐬
